@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/android/Lab11_Dialog2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="750fad2eaa1e6f2591d09911ec8f509aa42d24a8">
+        <dex dex="/Users/android/Lab11_Dialog2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f1766f6b474ce0d1a837ff2f290aec57f005274c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/android/Lab11_Dialog2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/android/Lab11_Dialog2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_fddee3fe48168ce23c081e761667e6b123383ae2/classes.dex" />
+    </item>
+
+</items>

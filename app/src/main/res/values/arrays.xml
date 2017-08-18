@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="response">
+        <item>我知道</item>
+        <item>手狗腿</item>
+        <item>大家都知詩</item>
+    </string-array>
+</resources>
