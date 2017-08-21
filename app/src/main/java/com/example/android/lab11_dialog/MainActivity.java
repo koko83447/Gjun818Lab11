@@ -1,6 +1,7 @@
 package com.example.android.lab11_dialog;
 
 import android.content.DialogInterface;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
-implements DialogInterface.OnClickListener{
+implements DialogInterface.OnClickListener
+        , MyDialogFragment.想收對話框結果的{
 
     private TextView m_tv_message;
     private int mChoice;
@@ -45,8 +47,6 @@ implements DialogInterface.OnClickListener{
                 .setNegativeButton("狗腿",listener)
                 .show();
     }
-
-
 
     private class AlertDialogYesNoLIstener implements DialogInterface.OnClickListener{
         @Override
@@ -99,7 +99,6 @@ implements DialogInterface.OnClickListener{
                 .show();
     }
 
-
     public void clickAlerDialogMultiChoice(View view) {
         final String[] response = getResources().getStringArray(R.array.response);
         final boolean[] selected = new boolean[response.length];
@@ -135,7 +134,6 @@ implements DialogInterface.OnClickListener{
 
     }
 
-
     public void clickAlerDialogSingleChoice(View view) {
         final String[] response = getResources().getStringArray(R.array.response);
         mChoice = 0;
@@ -160,5 +158,21 @@ implements DialogInterface.OnClickListener{
                     }
                 })
                 .show();
+    }
+
+    public void clickMyDialogFragment(View view) {
+        MyDialogFragment dialog = new MyDialogFragment();
+        dialog.set想收對話框結果的(this);
+        dialog.show(getSupportFragmentManager(), "MyDialogFragment");
+    }
+
+    @Override
+    public void 收結果(String username) {
+        if (username == null){
+            m_tv_message.setText("取消登入");
+        }else {
+            m_tv_message.setText("歡迎光臨"+username);
+        }
+
     }
 }
